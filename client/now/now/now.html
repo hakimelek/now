@@ -1,0 +1,39 @@
+<template name="Now">
+ <div class="ui now piled segment">
+    {{#if disableEdit}}
+      <div class="now">
+       {{{now.body}}}
+      </div>
+    {{else}}
+      <form id="edit-now" class="form edit-now">
+        {{> froalaReactive getContext}}
+      </form>
+    {{/if}}
+  </div>
+  <div class="ui grid centered">
+
+  {{#if $not disableEdit}}
+    <div class="row">
+      <button class="ui saveNewNow huge secondary button">
+        Save
+      </button>
+    </div>
+  {{/if}}
+
+  <div class="row">
+
+     {{#if isMe}}
+     <h4>Embed this now in your website</h4>
+
+     <div class="ui segment codesnippet">
+        <div class="ui bottom right attached label nospacelabel copylabel">
+           <button class="ui icon copybutton button">
+             <i class="copy icon"></i>
+           </button>
+       </div>
+          {{{HTMLsnippet}}}
+      </div>
+     {{/if}}
+    </div>
+  </div>
+</template>

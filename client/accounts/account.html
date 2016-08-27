@@ -1,0 +1,30 @@
+<template name="accountSetup">
+	<div class="signup_container">
+    <div class="ui stacked segment">
+      {{#if errorMessage}}
+        <div class="ui violet message">{{errorMessage}}</div>
+      {{/if}}
+
+
+  {{#if toggleLogin }}
+    {{>signin}}
+  {{else}}
+    {{#if showDone}}
+      {{>done}}
+    {{else}}
+      {{#if showThumb}}
+        {{>thumbnail}}
+      {{else}}
+        {{#if showUsername }}
+          {{>username}}
+        {{else}}
+          {{>signup}}
+        {{/if}}
+      {{/if}}
+    {{/if}}
+  {{/if}}
+
+</div>
+
+	</div>
+</template>

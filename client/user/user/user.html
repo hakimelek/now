@@ -1,0 +1,35 @@
+<template name="User">
+      <div class="ui text container">
+
+      {{#with userProfile}}
+      <div class="ui items">
+        <div class="item">
+          <div class="ui tiny circular image">
+           <img src="http://photon.hypb.st/hypetrak.com/images/2012/06/kool-ad-300x300.jpg">
+          </div>
+        </div>
+        <div class="item">
+          <div class="content">
+            <h1 class="header">
+              {{profile.firstName}}
+            </h1>
+            <div class="description">
+              <p>
+              {{#linkTo route='user'}}
+                  @{{username}}
+              {{/linkTo}}
+              {{#if isMe}}
+                <i class="write square settings icon"></i>
+              {{/if}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/with}}
+
+
+        {{>Now}}
+      </div>
+
+</template>

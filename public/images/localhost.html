@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="./localhost_files/merged-stylesheets.css">
+
+
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body class="dimmable blurring dimmed">
+
+
+
+<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.4.1%22%2C%22meteorEnv%22%3A%7B%22NODE_ENV%22%3A%22development%22%2C%22TEST_METADATA%22%3A%22%7B%7D%22%7D%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22accountsConfigCalled%22%3Atrue%2C%22appId%22%3A%221crzmqn14m2w5h47pa7g%22%2C%22autoupdateVersion%22%3A%22c3de5a7c6f3a790b921c7310111266ef61a9a07d%22%2C%22autoupdateVersionRefreshable%22%3A%2220862560e644b4984c0ffff26be97dde33c81f8e%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script>
+
+  <script type="text/javascript" src="./localhost_files/underscore.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteor.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteor-base.js"></script>
+  <script type="text/javascript" src="./localhost_files/mobile-experience.js"></script>
+  <script type="text/javascript" src="./localhost_files/modules-runtime.js"></script>
+  <script type="text/javascript" src="./localhost_files/modules.js"></script>
+  <script type="text/javascript" src="./localhost_files/es5-shim.js"></script>
+  <script type="text/javascript" src="./localhost_files/promise.js"></script>
+  <script type="text/javascript" src="./localhost_files/ecmascript-runtime.js"></script>
+  <script type="text/javascript" src="./localhost_files/babel-compiler.js"></script>
+  <script type="text/javascript" src="./localhost_files/ecmascript.js"></script>
+  <script type="text/javascript" src="./localhost_files/base64.js"></script>
+  <script type="text/javascript" src="./localhost_files/ejson.js"></script>
+  <script type="text/javascript" src="./localhost_files/id-map.js"></script>
+  <script type="text/javascript" src="./localhost_files/ordered-dict.js"></script>
+  <script type="text/javascript" src="./localhost_files/tracker.js"></script>
+  <script type="text/javascript" src="./localhost_files/babel-runtime.js"></script>
+  <script type="text/javascript" src="./localhost_files/random.js"></script>
+  <script type="text/javascript" src="./localhost_files/mongo-id.js"></script>
+  <script type="text/javascript" src="./localhost_files/diff-sequence.js"></script>
+  <script type="text/javascript" src="./localhost_files/geojson-utils.js"></script>
+  <script type="text/javascript" src="./localhost_files/minimongo.js"></script>
+  <script type="text/javascript" src="./localhost_files/check.js"></script>
+  <script type="text/javascript" src="./localhost_files/retry.js"></script>
+  <script type="text/javascript" src="./localhost_files/ddp-common.js"></script>
+  <script type="text/javascript" src="./localhost_files/reload.js"></script>
+  <script type="text/javascript" src="./localhost_files/ddp-client.js"></script>
+  <script type="text/javascript" src="./localhost_files/ddp.js"></script>
+  <script type="text/javascript" src="./localhost_files/ddp-server.js"></script>
+  <script type="text/javascript" src="./localhost_files/allow-deny.js"></script>
+  <script type="text/javascript" src="./localhost_files/mongo.js"></script>
+  <script type="text/javascript" src="./localhost_files/blaze-html-templates.js"></script>
+  <script type="text/javascript" src="./localhost_files/reactive-var.js"></script>
+  <script type="text/javascript" src="./localhost_files/jquery.js"></script>
+  <script type="text/javascript" src="./localhost_files/standard-minifier-css.js"></script>
+  <script type="text/javascript" src="./localhost_files/standard-minifier-js.js"></script>
+  <script type="text/javascript" src="./localhost_files/shell-server.js"></script>
+  <script type="text/javascript" src="./localhost_files/ddp-rate-limiter.js"></script>
+  <script type="text/javascript" src="./localhost_files/localstorage.js"></script>
+  <script type="text/javascript" src="./localhost_files/callback-hook.js"></script>
+  <script type="text/javascript" src="./localhost_files/deps.js"></script>
+  <script type="text/javascript" src="./localhost_files/htmljs.js"></script>
+  <script type="text/javascript" src="./localhost_files/observe-sequence.js"></script>
+  <script type="text/javascript" src="./localhost_files/blaze.js"></script>
+  <script type="text/javascript" src="./localhost_files/accounts-base.js"></script>
+  <script type="text/javascript" src="./localhost_files/service-configuration.js"></script>
+  <script type="text/javascript" src="./localhost_files/spacebars.js"></script>
+  <script type="text/javascript" src="./localhost_files/templating.js"></script>
+  <script type="text/javascript" src="./localhost_files/reactive-dict.js"></script>
+  <script type="text/javascript" src="./localhost_files/session.js"></script>
+  <script type="text/javascript" src="./localhost_files/sha.js"></script>
+  <script type="text/javascript" src="./localhost_files/srp.js"></script>
+  <script type="text/javascript" src="./localhost_files/accounts-password.js"></script>
+  <script type="text/javascript" src="./localhost_files/less.js"></script>
+  <script type="text/javascript" src="./localhost_files/accounts-ui-unstyled.js"></script>
+  <script type="text/javascript" src="./localhost_files/accounts-ui.js"></script>
+  <script type="text/javascript" src="./localhost_files/ui.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_core.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_dynamic-template.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_layout.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_url.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_middleware-stack.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_location.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_controller.js"></script>
+  <script type="text/javascript" src="./localhost_files/iron_router.js"></script>
+  <script type="text/javascript" src="./localhost_files/momentjs_moment.js"></script>
+  <script type="text/javascript" src="./localhost_files/aldeed_simple-schema.js"></script>
+  <script type="text/javascript" src="./localhost_files/raix_eventemitter.js"></script>
+  <script type="text/javascript" src="./localhost_files/aldeed_collection2-core.js"></script>
+  <script type="text/javascript" src="./localhost_files/aldeed_schema-index.js"></script>
+  <script type="text/javascript" src="./localhost_files/aldeed_schema-deny.js"></script>
+  <script type="text/javascript" src="./localhost_files/aldeed_collection2.js"></script>
+  <script type="text/javascript" src="./localhost_files/reywood_publish-composite.js"></script>
+  <script type="text/javascript" src="./localhost_files/raix_handlebar-helpers.js"></script>
+  <script type="text/javascript" src="./localhost_files/fortawesome_fontawesome.js"></script>
+  <script type="text/javascript" src="./localhost_files/froala_editor.js"></script>
+  <script type="text/javascript" src="./localhost_files/froala_editor-reactive.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_toykit.js"></script>
+  <script type="text/javascript" src="./localhost_files/msavin_mongol.js"></script>
+  <script type="text/javascript" src="./localhost_files/msavin_jetsetter.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_blueprint.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_authenticate.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_shell.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_method.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_result.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_autopub.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_pub.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_sub.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_email.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_listen.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_throttle.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_status.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_hotreload.js"></script>
+  <script type="text/javascript" src="./localhost_files/meteortoys_allthings.js"></script>
+  <script type="text/javascript" src="./localhost_files/semantic_ui-css.js"></script>
+  <script type="text/javascript" src="./localhost_files/useraccounts_core.js"></script>
+  <script type="text/javascript" src="./localhost_files/coffeescript.js"></script>
+  <script type="text/javascript" src="./localhost_files/softwarerero_accounts-t9n.js"></script>
+  <script type="text/javascript" src="./localhost_files/useraccounts_iron-routing.js"></script>
+  <script type="text/javascript" src="./localhost_files/useraccounts_semantic-ui.js"></script>
+  <script type="text/javascript" src="./localhost_files/gadicohen_prism.js"></script>
+  <script type="text/javascript" src="./localhost_files/erasaur_meteor-lodash.js"></script>
+  <script type="text/javascript" src="./localhost_files/chrismbeckett_toastr.js"></script>
+  <script type="text/javascript" src="./localhost_files/webapp.js"></script>
+  <script type="text/javascript" src="./localhost_files/livedata.js"></script>
+  <script type="text/javascript" src="./localhost_files/hot-code-push.js"></script>
+  <script type="text/javascript" src="./localhost_files/launch-screen.js"></script>
+  <script type="text/javascript" src="./localhost_files/autoupdate.js"></script>
+  <script type="text/javascript" src="./localhost_files/global-imports.js"></script>
+  <script type="text/javascript" src="./localhost_files/app.js"></script>
+  <script type="text/javascript" src="./localhost_files/mdg_validation-error.js"></script>
+
+
+
+
+
+  
+  
+  
+  
+  
+
+  
+  <!-- Meteor Toys Begin -->
+	
+		
+	
+	
+	
+<!-- Meteor Toys End --><div class="ui secondary menu">
+    <div class="ui container">
+      <div class="right menu">
+        
+          
+        
+      </div>
+    </div>
+  </div>
+  <div class="ui main container" style="margin-top: 1em">
+    <div class="ui text container">
+    <div class="ui now piled segment">
+
+      <form id="edit-now" class="form edit-now">
+        <div class="froala-reactive-meteorized fr-box fr-inline"><div class="fr-wrapper show-placeholder" dir="auto"><div class="fr-element fr-view" dir="auto" contenteditable="true" style="min-height: 400px;" spellcheck="true"><p><br></p></div><span class="fr-placeholder" style="font-size: 16px; line-height: 22.856px; margin-top: 0px; padding-top: 0px; padding-left: 0px; margin-left: 0px;">Type something</span></div><span class="fr-counter" style="bottom: 0px; margin-right: 0px;">0</span></div>
+      </form>
+<!--         {{{now.body}}}
+ -->
+  </div>
+  <div class="ui grid centered">
+
+  <div class="row">
+    <button class="ui saveNewNow huge secondary button">
+      Save
+    </button>
+  </div>
+
+  <div class="row">
+
+     
+    </div>
+  </div>
+  </div>
+
+  
+  </div><div class="fr-toolbar fr-desktop fr-inline" style="display: none;"><span class="fr-arrow"></span><button type="button" tabindex="-1" aria-label="Fullscreen" title="Fullscreen" class="fr-command fr-btn" data-cmd="fullscreen"><i class="fa fa-expand"></i></button><button type="button" tabindex="-1" aria-label="Bold" title="Bold (⌘B)" class="fr-command fr-btn" data-cmd="bold"><i class="fa fa-bold"></i></button><button type="button" tabindex="-1" aria-label="Italic" title="Italic (⌘I)" class="fr-command fr-btn" data-cmd="italic"><i class="fa fa-italic"></i></button><button type="button" tabindex="-1" aria-label="Underline" title="Underline (⌘U)" class="fr-command fr-btn" data-cmd="underline"><i class="fa fa-underline"></i></button><button type="button" tabindex="-1" aria-label="Strikethrough" title="Strikethrough (⌘S)" class="fr-command fr-btn" data-cmd="strikeThrough"><i class="fa fa-strikethrough"></i></button><button type="button" tabindex="-1" aria-label="Subscript" title="Subscript" class="fr-command fr-btn" data-cmd="subscript"><i class="fa fa-subscript"></i></button><button type="button" tabindex="-1" aria-label="Superscript" title="Superscript" class="fr-command fr-btn" data-cmd="superscript"><i class="fa fa-superscript"></i></button><button type="button" tabindex="-1" aria-label="Font Family" title="Font Family" class="fr-command fr-btn fr-dropdown fr-selection" data-cmd="fontFamily"><i class="fa fa-font"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><a class="fr-command" data-cmd="fontFamily" data-param1="Arial,Helvetica,sans-serif" style="font-family: Arial,Helvetica,sans-serif" title="Arial">Arial</a></li><li><a class="fr-command" data-cmd="fontFamily" data-param1="Georgia,serif" style="font-family: Georgia,serif" title="Georgia">Georgia</a></li><li><a class="fr-command" data-cmd="fontFamily" data-param1="Impact,Charcoal,sans-serif" style="font-family: Impact,Charcoal,sans-serif" title="Impact">Impact</a></li><li><a class="fr-command" data-cmd="fontFamily" data-param1="Tahoma,Geneva,sans-serif" style="font-family: Tahoma,Geneva,sans-serif" title="Tahoma">Tahoma</a></li><li><a class="fr-command" data-cmd="fontFamily" data-param1="Times New Roman,Times,serif" style="font-family: Times New Roman,Times,serif" title="Times New Roman">Times New Roman</a></li><li><a class="fr-command" data-cmd="fontFamily" data-param1="Verdana,Geneva,sans-serif" style="font-family: Verdana,Geneva,sans-serif" title="Verdana">Verdana</a></li></ul></div></div></div><button type="button" tabindex="-1" aria-label="Font Size" title="Font Size" class="fr-command fr-btn fr-dropdown fr-selection" data-cmd="fontSize"><i class="fa fa-text-height"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><a class="fr-command" data-cmd="fontSize" data-param1="8px" title="8">8</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="9px" title="9">9</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="10px" title="10">10</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="11px" title="11">11</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="12px" title="12">12</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="14px" title="14">14</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="18px" title="18">18</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="24px" title="24">24</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="30px" title="30">30</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="36px" title="36">36</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="48px" title="48">48</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="60px" title="60">60</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="72px" title="72">72</a></li><li><a class="fr-command" data-cmd="fontSize" data-param1="96px" title="96">96</a></li></ul></div></div></div><div class="fr-separator fr-vs"></div><button type="button" tabindex="-1" aria-label="Colors" title="Colors" class="fr-command fr-btn" data-cmd="color" data-popup="true"><i class="fa fa-tint"></i></button><button type="button" tabindex="-1" aria-label="Emoticons" title="Emoticons" class="fr-command fr-btn" data-cmd="emoticons" data-popup="true"><i class="fa fa-smile-o"></i></button><button type="button" tabindex="-1" aria-label="Inline Style" title="Inline Style" class="fr-command fr-btn fr-dropdown" data-cmd="inlineStyle"><i class="fa fa-paint-brush"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><span style="font-size: 20px; color: red;"><a class="fr-command" data-cmd="inlineStyle" data-param1="font-size: 20px; color: red;" title="Big Red">Big Red</a></span></li><li><span style="font-size: 14px; color: blue;"><a class="fr-command" data-cmd="inlineStyle" data-param1="font-size: 14px; color: blue;" title="Small Blue">Small Blue</a></span></li></ul></div></div></div><button type="button" tabindex="-1" aria-label="Paragraph Style" title="Paragraph Style" class="fr-command fr-btn fr-dropdown" data-cmd="paragraphStyle"><i class="fa fa-magic"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><a class="fr-command fr-text-gray" data-cmd="paragraphStyle" data-param1="fr-text-gray" title="Gray">Gray</a></li><li><a class="fr-command fr-text-bordered" data-cmd="paragraphStyle" data-param1="fr-text-bordered" title="Bordered">Bordered</a></li><li><a class="fr-command fr-text-spaced" data-cmd="paragraphStyle" data-param1="fr-text-spaced" title="Spaced">Spaced</a></li><li><a class="fr-command fr-text-uppercase" data-cmd="paragraphStyle" data-param1="fr-text-uppercase" title="Uppercase">Uppercase</a></li></ul></div></div></div><div class="fr-separator fr-vs"></div><button type="button" tabindex="-1" aria-label="Paragraph Format" title="Paragraph Format" class="fr-command fr-btn fr-dropdown fr-selection" data-cmd="paragraphFormat"><i class="fa fa-paragraph"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><p style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="N" title="Normal">Normal</a></p></li><li><h1 style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="H1" title="Heading 1">Heading 1</a></h1></li><li><h2 style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="H2" title="Heading 2">Heading 2</a></h2></li><li><h3 style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="H3" title="Heading 3">Heading 3</a></h3></li><li><h4 style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="H4" title="Heading 4">Heading 4</a></h4></li><li><pre style="padding: 0 !important; margin: 0 !important;"><a class="fr-command" data-cmd="paragraphFormat" data-param1="PRE" title="Code">Code</a></pre></li></ul></div></div></div><button type="button" tabindex="-1" aria-label="Align" title="Align" class="fr-command fr-btn fr-dropdown" data-cmd="align"><i class="fa fa-align-left"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><a class="fr-command fr-title" data-cmd="align" data-param1="left" title="Align Left"><i class="fa fa-align-left"></i></a></li><li><a class="fr-command fr-title" data-cmd="align" data-param1="center" title="Align Center"><i class="fa fa-align-center"></i></a></li><li><a class="fr-command fr-title" data-cmd="align" data-param1="right" title="Align Right"><i class="fa fa-align-right"></i></a></li><li><a class="fr-command fr-title" data-cmd="align" data-param1="justify" title="Align Justify"><i class="fa fa-align-justify"></i></a></li></ul></div></div></div><button type="button" tabindex="-1" aria-label="Ordered List" title="Ordered List" class="fr-command fr-btn" data-cmd="formatOL"><i class="fa fa-list-ol"></i></button><button type="button" tabindex="-1" aria-label="Unordered List" title="Unordered List" class="fr-command fr-btn" data-cmd="formatUL"><i class="fa fa-list-ul"></i></button><button type="button" tabindex="-1" aria-label="Decrease Indent" title="Decrease Indent (⌘[)" class="fr-command fr-btn" data-cmd="outdent"><i class="fa fa-outdent"></i></button><button type="button" tabindex="-1" aria-label="Increase Indent" title="Increase Indent (⌘])" class="fr-command fr-btn" data-cmd="indent"><i class="fa fa-indent"></i></button><button type="button" tabindex="-1" aria-label="Quote" title="Quote" class="fr-command fr-btn fr-dropdown" data-cmd="quote"><i class="fa fa-quote-left"></i></button><div class="fr-dropdown-menu"><div class="fr-dropdown-wrapper"><div class="fr-dropdown-content"><ul class="fr-dropdown-list"><li><a class="fr-command" data-cmd="quote" data-param1="increase" title="Increase">Increase</a></li><li><a class="fr-command" data-cmd="quote" data-param1="decrease" title="Decrease">Decrease</a></li></ul></div></div></div><button type="button" tabindex="-1" aria-label="Insert Horizontal Line" title="Insert Horizontal Line" class="fr-command fr-btn" data-cmd="insertHR"><i class="fa fa-minus"></i></button><div class="fr-separator fr-hs"></div><button type="button" tabindex="-1" aria-label="Insert Link" title="Insert Link (⌘K)" class="fr-command fr-btn" data-cmd="insertLink" data-popup="true"><i class="fa fa-link"></i></button><button type="button" tabindex="-1" aria-label="Insert Image" title="Insert Image (⌘P)" class="fr-command fr-btn" data-cmd="insertImage" data-popup="true"><i class="fa fa-image"></i></button><button type="button" tabindex="-1" aria-label="Insert Video" title="Insert Video" class="fr-command fr-btn" data-cmd="insertVideo" data-popup="true"><i class="fa fa-video-camera"></i></button><button type="button" tabindex="-1" aria-label="Upload File" title="Upload File" class="fr-command fr-btn" data-cmd="insertFile" data-popup="true"><i class="fa fa-file-o"></i></button><button type="button" tabindex="-1" aria-label="Insert Table" title="Insert Table" class="fr-command fr-btn" data-cmd="insertTable" data-popup="true"><i class="fa fa-table"></i></button><button type="button" tabindex="-1" aria-label="Undo" title="Undo (⌘Z)" class="fr-command fr-btn fr-disabled" data-cmd="undo"><i class="fa fa-rotate-left"></i></button><button type="button" tabindex="-1" aria-label="Redo" title="Redo (⌘⇧Z)" class="fr-command fr-btn fr-disabled" data-cmd="redo"><i class="fa fa-rotate-right"></i></button><button type="button" tabindex="-1" aria-label="Clear Formatting" title="Clear Formatting" class="fr-command fr-btn" data-cmd="clearFormatting"><i class="fa fa-eraser"></i></button><button type="button" tabindex="-1" aria-label="Select All" title="Select All" class="fr-command fr-btn" data-cmd="selectAll"><i class="fa fa-mouse-pointer"></i></button><button type="button" tabindex="-1" aria-label="Code View" title="Code View" class="fr-command fr-btn" data-cmd="html"><i class="fa fa-code"></i></button></div><div class="ui dimmer modals page transition visible active" style="display: block !important;"><div class="ui small modal transition visible active" style="margin-top: -123.5px; display: block !important;">
+      <div class="signup_container">
+    <div class="ui stacked segment">
+           <div class="ui form">
+            <div class="field">
+              <div class="ui left icon input">
+                <input type="text" placeholder="Username" name="username">
+                <i class="user icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <input type="email" placeholder="Email" name="email">
+                <i class="mail icon"></i>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <input type="password" placeholder="Password" name="password">
+                <i class="lock icon"></i>
+              </div>
+            </div>
+            <button type="submit" class="ui green submit button">Generate your Now Page</button>
+          </div>
+
+          <div class="ui  horizontal divider">
+           Or
+          </div>
+          <div class="center aligned column">
+              <button class="ui left attached facebook button"><i class="icon facebook"></i> Facebook</button>
+              <button class="right attached ui twitter button"><i class="icon twitter"></i> Twitter</button>
+          </div>
+  </div>
+	</div>
+  </div></div></body></html>

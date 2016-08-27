@@ -1,0 +1,26 @@
+<template name="MasterLayout">
+  <div class="ui secondary menu">
+    <div class="ui container">
+      <div class="right menu">
+        {{#if currentUser}}
+            <i class="ui icon black settings"></i>
+        {{else}}
+          {{#if loggingIn}}
+            Logging in...
+          {{/if}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  <div class="ui main container" style="margin-top: 1em">
+    {{> yield}}
+  </div>
+
+  <div class="ui tiny settings_modal modal">
+      {{>settings}}
+  </div>
+
+  <div class="ui tiny login_modal modal">
+      {{>accountSetup}}
+  </div>
+</template>
