@@ -11,5 +11,15 @@ Template.MasterLayout.events({
         .modal('show')
       ;
   },
+
+  'click .signin': function(){
+    Session.set('signinModal', true);
+    $('.ui.login_modal')
+        .modal({
+          blurring: true
+        })
+        .modal('show')
+      ;
+  },
 });
 
