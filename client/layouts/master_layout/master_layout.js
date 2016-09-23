@@ -3,7 +3,7 @@ Template.MasterLayout.helpers({
 });
 
 Template.MasterLayout.events({
-  'click .settings': function(){
+  'click .settings': function () {
     $('.ui.settings_modal')
         .modal({
           blurring: true
@@ -12,7 +12,7 @@ Template.MasterLayout.events({
       ;
   },
 
-  'click .signin': function(){
+  'click .signin': function () {
     Session.set('signinModal', true);
     $('.ui.login_modal')
         .modal({
@@ -20,6 +20,6 @@ Template.MasterLayout.events({
         })
         .modal('show')
       ;
-  },
+  }
 });
 

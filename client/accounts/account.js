@@ -3,19 +3,19 @@ Template.accountSetup.onCreated(function () {
 });
 
 Template.accountSetup.helpers({
-  'toggleLogin': function() {
+  'toggleLogin': function () {
     return Session.get('signinModal');
   },
 
-  'showUsername': function() {
+  'showUsername': function () {
     return Session.get('setUsername');
   },
 
-  'showThumb': function() {
+  'showThumb': function () {
     return Session.get('setThumb');
   },
 
-  'showDone': function() {
+  'showDone': function () {
     return Session.get('done');
   },
 
@@ -25,30 +25,24 @@ Template.accountSetup.helpers({
 });
 
 Template.accountSetup.events({
-  'submit .signup': function(e, template) {
+  'submit .signup': function (e, template) {
     e.preventDefault();
     var email = event.target.email.value;
     var password = event.target.password.value;
 
     var user = {
       'email': email,
-      'password': password,
+      'password': password
     }
 
     // Meteor.call('signUpUser', user, function(error, username){
     //   if(error) throw console.log(error.reason);
     //   Router.go('user', {username: username});
     // });
-    Accounts.createUser(user, function(error){
-          if (error) template.lastError.set(error.reason);
-          else Session.set('setUsername', true);
+    Accounts.createUser(user, function (error) {
+      if (error) template.lastError.set(error.reason);
+      Session.set('setUsername', true);
     });
-
-  },
-
-  'click .toggleLogin': function(e){
-    e.preventDefault();
-    Session.set('signinModal', !Session.get('signinModal'));
   },
 
   'submit .signin': function (event, template) {
@@ -56,31 +50,29 @@ Template.accountSetup.events({
     var email = event.target.email.value;
     var password = event.target.password.value;
 
-    Meteor.loginWithPassword(email,password,function(error, response){
-        if(error)             template.lastError.set(error.reason);
-        $('.ui.login_modal')
-          .modal()
-          .modal('hide')
-        ;
-        Router.go('user', {username:Meteor.user().username});
+    Meteor.loginWithPassword(email, password, function (error, response) {
+      if (error) template.lastError.set(error.reason);
+      $('.ui.login_modal')
+        .modal()
+        .modal('hide');
+      Router.go('user', {username: Meteor.user().username});
     });
   },
 
   'submit .setUsername': function (event, template) {
     event.preventDefault();
+    $('.ui.login_modal').modal('closable', false);
     var username = event.target.username.value;
 
-    Meteor.call('setUsername', username, function(error){
-      if(error) return template.lastError.set(error.reason);
-      if(Meteor.userId()){
+    Meteor.call('setUsername', username, function (error) {
+      if (error) return template.lastError.set(error.reason);
+      if (Meteor.userId()) {
         Router.go('user', { username: username });
         Meteor.call('saveNow', {
           body: Session.get('NowBody')
-        }, function(error, response) {
+        }, function (error, response) {
           if (error) console.log('error: ', error.reason);
-          else {
-            tmpl.$('div.froala-reactive-meteorized').froalaEditor();
-          }
+          template.$('div.froala-reactive-meteorized').froalaEditor();
         });
       }
       Session.set('setThumb', true);
@@ -94,36 +86,52 @@ Template.accountSetup.events({
     Session.set('done', true);
   },
 
-  'click .toggleLogin': function(e){
+  'click .toggleLogin': function (e) {
     e.preventDefault();
     Session.set('signinModal', !Session.get('signinModal'));
   },
 
-  'click .facebook': function(event) {
-    Meteor.loginWithFacebook({}, function(err){
-          if (err) throw new Meteor.Error("Facebook login failed");
+  'click .signup_facebook': function (event, template) {
+    Meteor.loginWithFacebook({}, function (error) {
+      if (error) template.lastError.set(error.reason);
+      else Session.set('setUsername', true);
     });
   },
 
-  'click .twitter': function(event) {
-    Meteor.loginWithTwitter({}, function(err){
-          if (err) throw new Meteor.Error("Twitter login failed");
+  'click .signup_twitter': function (event, template) {
+    Meteor.loginWithTwitter({}, function (error) {
+      if (error) template.lastError.set(error.reason);
+      else Session.set('setUsername', true);
     });
   },
 
+  'click .signin_facebook': function (event, template) {
+    Meteor.loginWithFacebook({}, function (error) {
+      if (error) template.lastError.set(error.reason);
+      $('.ui.login_modal')
+        .modal()
+        .modal('hide')
+      ;
+      Router.go('user', {username: Meteor.user().username});
+    });
+  },
+
+  'click .signin_twitter': function (event, template) {
+    Meteor.loginWithTwitter({}, function (error) {
+      if (error) template.lastError.set(error.reason);
+      $('.ui.login_modal')
+        .modal()
+        .modal('hide')
+      ;
+      Router.go('user', {username: Meteor.user().username});
+    });
+  }
 });
 
 Template.done.onCreated(function () {
-  setTimeout(function() {
+  setTimeout(function () {
     $('.ui.login_modal')
           .modal()
           .modal('hide');
   }, 5000);
 });
-
-
-
-
-
-
-

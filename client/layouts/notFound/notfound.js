@@ -1,3 +1,5 @@
 Template.notfound.onCreated(function () {
-  Router.go('home')
+  setTimeout(function () {
+    Router.go('home')
+  }, 3000);
 });

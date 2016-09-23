@@ -3,15 +3,21 @@ Template.Now.events({
     e.preventDefault();
     var body = tmpl.$('div.froala-reactive-meteorized').froalaEditor('html.get', true);
     Session.set('NowBody', body);
-    if(Meteor.userId()) {
+    if (Meteor.userId()) {
+      $('.saveNewNow').addClass('loading');
       Meteor.call('saveNow', {
         body: body
-      }, function(error, response) {
-        if (error) {
-          console.log('error: ', error);
-        } else {
-          tmpl.$('div.froala-reactive-meteorized').froalaEditor();
-        }
+      }, function (error, response) {
+        if (error) throw error;
+        $('.saveNewNow').removeClass('loading');
+        $('.saveNewNow').removeClass('grey').addClass('green');
+        $('.saveNewNow').html('<i class="checkmark icon"></i>');
+        setTimeout(function () {
+          $('.saveNewNow').removeClass('green').addClass('grey');
+          $('.saveNewNow').html('Save');
+        }, 1500);
+
+        tmpl.$('div.froala-reactive-meteorized').froalaEditor();
       });
     } else {
       $('.ui.login_modal')
@@ -29,7 +35,7 @@ Template.Now.helpers({
     if(currentNow)
        var value = currentNow.body
 
-      return {
+    return {
       // Set html content
       _value: value,
       inlineMode: false,
@@ -56,16 +62,8 @@ Template.Now.helpers({
     }
   },
 
-  now(){
-      var currentNow = Nows.findOne({},{sort: {createdAt: -1}, limit:1});
-      if(currentNow)
-         return currentNow.body;
-      else
-         return 'loading';
-  },
-
-  now: function(){
-    return Nows.findOne({},{sort: {createdAt: -1}, limit:1});
+  now: function () {
+    return Nows.findOne({});
   },
 
   isMe: function () {
@@ -74,18 +72,17 @@ Template.Now.helpers({
 
   disableEdit: function () {
     var controller = Router.current();
-    if(controller.params.username && !Meteor.userId()){
-      return true;
-    }
+    var userOnPage = Meteor.users.findOne({username: controller.params.username});
+    return userOnPage._id !== Meteor.userId();
   },
 
-  username: function(){
+  username: function () {
     return Router.current().params.username;
   },
 
-  HTMLsnippet(){
-    var code = '<script src="https://goo.gl/WqhYHa"></script><div id="now" data-username="'+Router.current().params.username+'"></div>';
-      Session.set('copyboard', code);
+  HTMLsnippet () {
+    var code = '<script src="https://goo.gl/WqhYHa"></script><div id="now" data-username="' + Router.current().params.username + '"></div>';
+    Session.set('copyboard', code);
     var result = Prism.highlight(code, Prism.languages.markup);
     return result;
   }
@@ -97,7 +94,7 @@ Template.Now.onCreated(function(){
   var self = this;
   self.autorun(function(){
     var controller = Router.current();
-    var user = Meteor.users.findOne({"username":controller.params.username});
+    var user = Meteor.users.findOne({"username": controller.params.username});
 
     if(user)
       var userId = user._id;
