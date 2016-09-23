@@ -1,13 +1,19 @@
 ServiceConfiguration.configurations.remove({
-    service: 'facebook',
+  service: 'facebook'
 });
 
 ServiceConfiguration.configurations.remove({
-    service: 'twitter',
+  service: 'twitter'
 });
 
 ServiceConfiguration.configurations.insert({
-    service: 'facebook',
-    appId: FACEBOOK.appId,
-    secret: 'FACEBOOK.secret'
+  service: 'facebook',
+  appId: process.env.FACEBOOK_APPID,
+  secret: process.env.FACEBOOK_SECRET
+});
+
+ServiceConfiguration.configurations.insert({
+  service: 'twitter',
+  appId: process.env.TWITTER_APPID,
+  secret: process.env.TWITTER_SECRET
 });
