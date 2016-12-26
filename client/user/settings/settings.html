@@ -1,5 +1,44 @@
 <template name="settings">
-  <br>
-  <button class="ui button red logout">logout</button>
-  <br>
+	<div class="ui card settings">
+		{{#with userProfile}}
+		    <input type="file" id="picture-upload"/>
+		    <div class="content">
+			    <div class="ui items row">
+			      <div class="item">
+			      	<label class="ui tiny image" for="picture-upload">
+					    <a>
+					    	<img src="{{#if profile.picture}}{{profile.picture}}{{else}}http://bootdey.com/img/Content/user_3.jpg{{/if}}">
+					    </a>
+				    </label>
+				    <div class="content">
+					    <a class="header">
+							<div class="field ui transparent input input-fullname">
+								<input type="text" class="full-name" value="{{profile.fullName}}" placeholder="Type your name">
+							</div>				      
+						</a>
+				        <div class="description">
+					      	<div class="ui form">
+						        <div class="field ui transparent">
+									<textarea rows="2" class="textarea-bio" name="bio" placeholder="Add a bio">{{profile.bio}}</textarea> 
+								</div>
+							</div>
+				        </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		    <div class="extra content">
+				<span class="right floated">
+					Joined {{timestamp}}
+				</span>
+				<span>
+					@{{username}}
+				</span>
+		    </div>
+	    {{/with}}
+		<div class="ui buttons">
+			<button class="ui button red logout">logout</button>
+			<button class="ui button saveInfo">save</button>
+		</div>
+	</div>
 </template>

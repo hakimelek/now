@@ -1,3 +1,16 @@
-<template name="notfound">
-Not found
+<template name="NotFound">
+	<div class="notfound">
+		<div class="ui container">
+			{{#if currentUser}}
+			  {{>Menu}}
+			{{/if}}
+			<h1>Not Found!</h1>
+			{{#linkTo route='home'}}Back to home{{/linkTo}}
+		</div>
+	    <div class="video-background">
+		    <div class="video-foreground">
+		    	<iframe src="https://www.youtube.com/embed/VZNgcdaU-Tc?t=109&controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+		    </div>
+		</div>
+    </div>
 </template>

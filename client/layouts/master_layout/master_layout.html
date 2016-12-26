@@ -1,20 +1,5 @@
 <template name="MasterLayout">
-  <div class="ui secondary menu">
-    <div class="ui container">
-      <div class="right menu">
-        {{#if currentUser}}
-            <i class="ui icon black settings"></i>
-        {{else}}
-          {{#if loggingIn}}
-            Logging in...
-          {{else}}
-            <a class="signin">Sign in</a>
-          {{/if}}
-        {{/if}}
-      </div>
-    </div>
-  </div>
-  <div class="ui main container" style="margin-top: 1em">
+  <div class="">
     {{> yield}}
   </div>
 

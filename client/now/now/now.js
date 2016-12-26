@@ -1,3 +1,5 @@
+var copyToClipboard;
+
 Template.Now.events({
   'click .saveNewNow': function (e, tmpl) {
     e.preventDefault();
@@ -11,11 +13,12 @@ Template.Now.events({
         if (error) throw error;
         $('.saveNewNow').removeClass('loading');
         $('.saveNewNow').removeClass('grey').addClass('green');
+        $('.saveNewNow').addClass('icon');
         $('.saveNewNow').html('<i class="checkmark icon"></i>');
         setTimeout(function () {
-          $('.saveNewNow').removeClass('green').addClass('grey');
+          $('.saveNewNow').removeClass('green').removeClass('icon').addClass('grey');
           $('.saveNewNow').html('Save');
-        }, 1500);
+        }, 2500);
 
         tmpl.$('div.froala-reactive-meteorized').froalaEditor();
       });
@@ -26,6 +29,10 @@ Template.Now.events({
         })
         .modal('show');
     }
+  },
+
+  'click .copybutton': function (e, tmpl) {
+    copyToClipboard(Session.get('copyboard'));
   }
 });
 
@@ -73,7 +80,9 @@ Template.Now.helpers({
   disableEdit: function () {
     var controller = Router.current();
     var userOnPage = Meteor.users.findOne({username: controller.params.username});
-    return userOnPage._id !== Meteor.userId();
+    if (userOnPage)
+      return userOnPage._id !== Meteor.userId();
+    return false;
   },
 
   username: function () {
@@ -81,7 +90,7 @@ Template.Now.helpers({
   },
 
   HTMLsnippet () {
-    var code = '<script src="https://goo.gl/WqhYHa"></script><div id="now" data-username="' + Router.current().params.username + '"></div>';
+    var code = '<script src="https://goo.gl/95v9xT"></script><div id="now" data-username="' + Router.current().params.username + '"></div>';
     Session.set('copyboard', code);
     var result = Prism.highlight(code, Prism.languages.markup);
     return result;
@@ -102,3 +111,27 @@ Template.Now.onCreated(function(){
     self.subscribe('UserNow', userId);
   });
 });
+
+// Some stolen code from http://stackoverflow.com/a/33928558
+// Copy to Clipload
+copyToClipboard = function (text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", text); 
+
+    } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return false;
+        } finally {
+            document.body.removeChild(textarea);
+        }
+    }
+}

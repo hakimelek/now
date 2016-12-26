@@ -3,8 +3,13 @@ Meteor.publish('UserNow', function (userId) {
 });
 
 Meteor.publish('myNow', function (username) {
- var userId = Meteor.users.findOne({username: username}, {fields: {profile: 1}});
- return Nows.find({userId: userId._id}, {sort: {createdAt: 1}, limit: 1})
+	if (username) {
+		var user = Meteor.users.findOne({username: username});
+		if (user) {
+			return Nows.find({userId: user._id}, {sort: {createdAt: 1}, limit: 1})
+		}
+	}
+	return;
 });
 
 Meteor.publish('now', function (id) {
@@ -17,4 +22,8 @@ Meteor.publish('now', function (id) {
 
 Meteor.publish('user', function (username) {
   return Meteor.users.find({username: username}, {fields: {profile: 1, username: 1}});
+});
+
+Meteor.publish('userById', function (userId) {
+  return Meteor.users.find({_id: userId}, {fields: {profile: 1, username: 1, createdAt: 1}});
 });

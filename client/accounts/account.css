@@ -35,6 +35,49 @@
   }
 }
 
-.ui.modal {
-  text-align: center;
+.signup_container {
+  background: #fefefe;
+  padding: 0 auto !important;
+  text-align: center !important;
+}
+
+.signup-content .title, .signin-content .title {
+  color: #6a3093;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.createNowSignup:hover {
+  transform: translateY(-1px);
+}
+
+.createNowSignup {
+  white-space: nowrap;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px auto;
+  padding: 0 34px;
+  background: #6a3093;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #fff;
+  text-decoration: none;
+  transition: all .15s ease;
+  border: 0px;
+}
+
+.setUsername {
+  margin-top: 80px;
+  margin-bottom: 30px
+}
+
+.allset {
+  padding: 100px 50px;
+}
+
+.allset span {
+  font-size: 2em;
 }

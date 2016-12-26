@@ -20,6 +20,16 @@ Template.MasterLayout.events({
         })
         .modal('show')
       ;
+  },
+
+  'click .signup': function () {
+    Session.set('signupModal', true);
+    $('.ui.login_modal')
+        .modal({
+          blurring: true
+        })
+        .modal('show')
+      ;
   }
 });
 
