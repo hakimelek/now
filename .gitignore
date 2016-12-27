@@ -2,3 +2,4 @@ node_modules/
 server/credential.js
 .eslintrc.js
 npm-debug.log
+.deploy/

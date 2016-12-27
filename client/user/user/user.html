@@ -1,35 +1,40 @@
 <template name="User">
-      <div class="ui text container">
-
-      {{#with userProfile}}
-      <div class="ui items">
-        <div class="item">
-          <div class="ui tiny circular image">
-           <img src="http://photon.hypb.st/hypetrak.com/images/2012/06/kool-ad-300x300.jpg">
-          </div>
-        </div>
-        <div class="item">
-          <div class="content">
-            <h1 class="header">
-              {{profile.firstName}}
-            </h1>
-            <div class="description">
-              <p>
-              {{#linkTo route='user'}}
-                  @{{username}}
-              {{/linkTo}}
-              {{#if isMe}}
-                <i class="write square settings icon"></i>
-              {{/if}}
-              </p>
-            </div>
-          </div>
-        </div>
+  {{#with userProfile}}
+    <div class="user">
+      <div class="ui container">
+        {{#if currentUser}}
+          {{>Menu}}
+        {{else}}
+          <br><br>
+        {{/if}}
       </div>
-      {{/with}}
-
-
+      <div class="ui text container">
+        <div class="ui centered grid user-top">
+            {{#if profile.picture}}
+              <div class="ui tiny centered circular image row">
+                <img src="{{profile.picture}}">
+              </div>
+            {{/if}}
+            {{#if profile.fullName}}
+              <div class="ui content row">
+                  <h1>
+                    {{profile.fullName}}
+                  </h1>
+              </div>
+            {{/if}}
+            {{#if profile.bio}}
+              <div class="ui description row">
+                <p>
+                    {{profile.bio}}
+                </p>
+              </div>
+            {{/if}}
+            <h2>What I am up to right now</h2>
+        </div>
         {{>Now}}
       </div>
-
+    </div>
+  {{else}}
+    {{>NotFound}}
+  {{/with}}
 </template>

@@ -1,0 +1,28 @@
+<template name="Menu">
+	<div class="ui secondary menu nav-menu">
+		<div class="item">
+			{{#linkTo route='home'}}<a class="title">Now</a>{{/linkTo}}
+		</div>
+
+		<div class="right menu">
+			{{#if currentUser}}
+				<div class="item">
+				    {{#linkTo route="user" username=currentUser.username}}
+						<a class="right-items">{{currentUser.username}}</a>
+                    {{/linkTo}}
+				</div>
+			{{/if}}
+			<div class="item">
+				{{#if currentUser}}
+			    	<i class="ui icon settings right-items"></i>
+			    {{else}}
+			      {{#if loggingIn}}
+			        <span class="right-items">Logging in...</span>
+			      {{else}}
+			        <a class="signin right-items">Log in</a>
+			      {{/if}}
+			    {{/if}}
+			</div>   
+		</div>
+	</div>
+</template>

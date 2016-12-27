@@ -1,5 +1,46 @@
 <template name="Home">
-  <div class="ui text container">
-    {{>Now}}
-  </div>
+	<div class="landing">
+		<div class="ui container">
+			{{>Menu}}
+			<div class="intro">
+				<div class="ui grid centered">
+		  			<div class="twelve wide column intro-message">
+		  				<h1>Tell the world what are you doing now</h1>
+		  				<p>
+		  					The quickest way to setup your now page and share it with the world. You can also integrate it into your website 🙅 !
+		  				</p>
+
+		  				<button class="createNow">Create A Now Page</button>
+		  				<p class="its-free">It is free!</p>
+		  			</div>
+		  		</div>
+		  	</div>
+
+	  		<div class="sample-now">
+	  			<div class="ui piled segment sample-now-content">
+	  				<h2>What I am up to right now</h2>
+					<p>I’m in Los Angeles, California, focusing on these things:</p>
+					<ul>
+						<li>
+							Being a husband &amp; dad — reading &amp; working out with my kids, dates with my wife
+						</li>
+						<li>
+							Writing a short ebook: The Life of Pi
+						</li>
+						<li>Developing a <a href="#">new habit app</a></li>
+						<li>Writing articles for <a href="#">at Medium</a></li>
+						<li>Hiking, running, strength training, meditating, eating healthy vegan food</li>
+					</ul>
+					<p>These are my priorities. I say no to everything else: conferences, speaking engagements, promoting anything, new projects.</p>
+					<p><strong>Last update</strong>: October 22, 2016. (Page inspired by <a href="https://sivers.org/now">Derek Sivers</a>.)</p>
+				</div>
+	  		</div>
+	  	</div>
+	</div>
+	<div class="footer">
+		<div class="ui container">
+			Developed with <span>♥</span> in Winona and Brooklyn
+		</div>
+	</div>
+
 </template>

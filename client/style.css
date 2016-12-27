@@ -1,3 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
-  background: url(/images/noisy_grid.png);
+	font-family: 'Open Sans', Verdana serif !important;
+}
+
+h1, h2, h3, h4, h5, p, a {
+	font-family: 'Open Sans', Verdana serif !important;
+}
+
+a {
+	color: #6a3093 !important;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #6a3093 !important;
+}
+
+
+.landing {
+	background: #6a3093;
+	background: -webkit-linear-gradient(to right, #6a3093 , #a044ff); 
+	background: linear-gradient(to right, #6a3093 , #a044ff);
+}
+
+.nav-menu {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 100px;
+}
+
+.title {
+	font-size: 1.5em !important;
+	font-weight: bold !important;
+	text-transform: uppercase;
+	cursor: pointer !important;
+	font-family: 'Bitter', 'Open Sans', Verdana serif !important;
+}
+
+.right-items {
+	font-size: 1em !important;
+	font-weight: lighter !important;
+	text-transform: uppercase;
+	cursor: pointer !important;
+}
+
+.landing .title {
+	color: #fff !important;
+}
+
+.landing .right-items {
+	color: #fff !important;
+}
+
+.user .title {
+	color: #333 !important;
+}
+
+.user .right-items {
+	color: #333 !important;
+}
+
+.intro {
+	padding-top: 40px;
+	padding-bottom: 50px;
+}
+
+.intro h1{
+	color: #fff !important;
+	font-size: 2em !important;
+	font-weight: lighter !important;
+	text-transform: uppercase;
+	letter-spacing: .8px;
+	text-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	padding-bottom: 30px;
+}
+
+.intro p {
+	color: #fff !important;
+	font-weight: 400 !important;
+    font-size: 17px !important;
+    line-height: 26px !important;
+    text-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+   	padding-bottom: 30px;
+}
+
+.createNow:hover {
+	transform: translateY(-1px);
+    text-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+
+.createNow {
+	white-space: nowrap;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    background: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    color: #6435c9;
+    text-decoration: none;
+    transition: all .15s ease;
+    border: 0px;
+}
+
+.its-free {
+	margin: 10px auto 5px;
+	text-align: center;
+    color: #ccc !important;
+}
+
+.intro-message {
+	text-align: center !important;
+}
+
+.sample-now {
+	padding: 0px 20px;
+	padding-bottom: 100px;
+}
+
+.sample-now-content {
+	padding: 40px !important;
+}
+
+.footer {
+	min-height: 100px;
+	color: #333;
+	font-family: 'Bitter', 'Open Sans', Verdana serif !important;
+	text-align: center;
+	padding-top: 50px;
+}
+
+.footer span {
+	color: #6a3093;
+	font-size: 1.3em;
+}
+
+* { box-sizing: border-box; }
+
+.video-background {
+	background: #000;
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.notfound .title {
+	color: #eee !important;
+}
+
+.notfound .right-items {
+	color: #eee !important;
+}
+
+.notfound h1{
+	padding-top: 100px;
+	color: #ddd !important;
+	font-family: 'Bitter', 'Lato', Verdana serif !important;
+}
+
+.notfound a {
+	color: #ddd !important;
+	font-weight: lighter !important;
+}
+
+.settings {
+	width: 100% !important;
+}
+
+.settings input[type="file"] {
+    display: none;
+}
+
+.textarea-bio {
+	margin-top: -5px !important;
+	padding: 5px !important;
+	border: 0 !important;
+}
+
+.input-fullname {
+	padding: 10px 2px 0 !important;
+}
+
+.user-top {
+	padding-bottom: 40px !important;
 }

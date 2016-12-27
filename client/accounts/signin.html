@@ -1,33 +1,33 @@
 <template name="signin">
-       <h1>Welcome back!</h1>
+  <div class="signin-content">
+       <div class="title">Now</div>
        <div class="ui aligned stackable ">
         <div class="ui form">
          <form class="signin">
             <div class="field">
-              <label>Email</label>
-              <div class="ui left icon input">
+              <div class="ui transparent big left icon input">
                 <input type="text" placeholder="Email" name="email">
                 <i class="user icon"></i>
               </div>
             </div>
             <div class="field">
-              <label>Password</label>
-              <div class="ui left icon input">
+              <div class="ui transparent big left icon input">
                 <input type="password" placeholder="Password" name="password">
                 <i class="lock icon"></i>
               </div>
             </div>
-            <button type="submit" class="ui blue submit button">Login</button>
+            <button type="submit" class="createNowSignup">Login</button>
         </form>
         </div>
       </div>
-      <div class="ui  horizontal divider">
+<!--       <div class="ui  horizontal divider">
            Or
       </div>
       <div class="center aligned column">
-          <button class="ui left attached signin_facebook facebook button"><i class="icon facebook"></i> Facebook</button>
-          <button class="right attached ui signin_twitter twitter button"><i class="icon twitter"></i> Twitter</button>
+          <button class="ui left attached connect_facebook facebook button"><i class="icon facebook"></i> Facebook</button>
+          <button class="right attached ui connect_twitter twitter button"><i class="icon twitter"></i> Twitter</button>
       </div>
-      <br>
+      <br> -->
       <a class="toggleLogin">Back to sign up?</a>
+  </div>
 </template>
