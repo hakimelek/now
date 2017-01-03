@@ -21,7 +21,7 @@ a:hover {
 
 .landing {
 	background: #6a3093;
-	background: -webkit-linear-gradient(to right, #6a3093 , #a044ff); 
+	background: -webkit-linear-gradient(to right, #6a3093 , #a044ff);
 	background: linear-gradient(to right, #6a3093 , #a044ff);
 }
 
@@ -200,3 +200,8 @@ a:hover {
 .user-top {
 	padding-bottom: 40px !important;
 }
+
+.ui.text.container {
+  max-width: 850px !important;
+}
+
