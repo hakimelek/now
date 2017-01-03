@@ -6,7 +6,7 @@ Meteor.publish('myNow', function (username) {
 	if (username) {
 		var user = Meteor.users.findOne({username: username});
 		if (user) {
-			return Nows.find({userId: user._id}, {sort: {createdAt: 1}, limit: 1})
+			return Nows.find({userId: user._id}, {sort: {createdAt: -1}, limit: 1})
 		}
 	}
 	return;
